@@ -5,7 +5,7 @@ class PlRadioButton extends PlElement {
         return {
             name: { type: String },
             selected: { type: Boolean, reflectToAttribute: true },
-            label: { type: String }
+            caption: { type: String }
         }
     }
 
@@ -15,19 +15,19 @@ class PlRadioButton extends PlElement {
                 display: flex;
                 flex-direction: row;
                 width: 100%;
-                min-height: 32px;
+                min-height: var(--base-size-md);
                 align-items: center;
                 box-sizing: border-box;
-                gap: 8px;
+                gap: var(--space-sm);
                 user-select: none;
-                font: var(--font-md);
+                font: var(--text-font);
                 cursor: pointer;
             }
 
             :host .radio {
-                width: 16px;
-                height: 16px;
-                border-radius: 16px;
+                width: var(--base-size-xxs);
+                height: var(--base-size-xxs);
+                border-radius: var(--base-size-xxs);
                 border: 1px solid var(--grey-light);
                 display: flex;
                 align-items: center;
@@ -62,7 +62,7 @@ class PlRadioButton extends PlElement {
 
     static get template() {
         return html`
-            <span class="radio"></span> [[label]]
+            <span class="radio"></span> [[caption]]
 		`;
     }
 
