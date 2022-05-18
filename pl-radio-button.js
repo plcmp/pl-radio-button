@@ -5,7 +5,7 @@ class PlRadioButton extends PlElement {
         return {
             name: { type: String },
             selected: { type: Boolean, reflectToAttribute: true },
-            caption: { type: String }
+            label: { type: String }
         }
     }
 
@@ -14,55 +14,38 @@ class PlRadioButton extends PlElement {
             :host {
                 display: flex;
                 flex-direction: row;
-                width: 100%;
-                min-height: var(--base-size-md);
-                align-items: center;
-                box-sizing: border-box;
-                gap: var(--space-sm);
-                user-select: none;
-                font: var(--text-font);
-                cursor: pointer;
-            }
-
-            :host .radio {
-                width: var(--base-size-xxs);
-                height: var(--base-size-xxs);
-                border-radius: var(--base-size-xxs);
-                border: 1px solid var(--grey-light);
-                display: flex;
                 align-items: center;
                 justify-content: center;
+                padding: var(--space-xs) var(--space-sm);
+                height: var(--base-size-md);
+                min-width: fit-content;
+                box-sizing: border-box;
+                color: var(--text-color);
+                user-select: none;
+                cursor: pointer;
+                outline:none;
                 transition: all .3s ease-in-out;
+                flex-shrink: 0;
+                font: var(--text-font);
+                border-left: 1px solid var(--grey-base);
+                border-right:none;
+                gap: 8px;
             }
 
-            :host(:hover) .radio{
-                border: 1px solid var(--grey-dark);
-            }
-
-            :host([selected]) .radio {
+            :host([selected]),  :host(:hover) {
                 background: var(--primary-base);
                 border: 1px solid var(--primary-base);
+                color: white;
             }
 
-            :host([selected]) .radio:hover {
-                border: 1px solid var(--primary-dark);
-                background: var(--primary-dark);
-            }
-
-            :host([selected]) .radio::after {
-                display: block;
-                content: '';
-                background: white;
-                width: 8px;
-                height: 8px;
-                border-radius: 8px;
-            }
 		`;
     }
 
     static get template() {
         return html`
-            <span class="radio"></span> [[caption]]
+            <slot name="prefix"></slot>
+            [[label]]
+            <slot name="suffix"></slot>
 		`;
     }
 
