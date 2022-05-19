@@ -5,7 +5,7 @@ class PlRadioButton extends PlElement {
         return {
             name: { type: String },
             selected: { type: Boolean, reflectToAttribute: true },
-            caption: { type: String }
+            label: { type: String }
         }
     }
 
@@ -63,7 +63,7 @@ class PlRadioButton extends PlElement {
 
     static get template() {
         return html`
-            <span class="radio"></span> [[caption]]
+            <span class="radio"></span> [[label]]
 		`;
     }
 
