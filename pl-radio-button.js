@@ -27,8 +27,8 @@ class PlRadioButton extends PlElement {
                 transition: all .3s ease-in-out;
                 flex-shrink: 0;
                 font: var(--text-font);
-                border-left: 1px solid var(--grey-base);
-                border-right:none;
+                border: 1px solid var(--grey-base);
+                border-right: 1px solid transparent;
                 gap: 8px;
             }
 
@@ -49,7 +49,7 @@ class PlRadioButton extends PlElement {
 		`;
     }
 
-    connectedCallback(){
+    connectedCallback() {
         super.connectedCallback();
         this.addEventListener('click', this._onClick.bind(this));
     }
