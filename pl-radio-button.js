@@ -24,7 +24,7 @@ class PlRadioButton extends PlElement {
                 user-select: none;
                 cursor: pointer;
                 outline:none;
-                transition: all .3s ease-in-out;
+                transition: background, color .3s ease-in-out;
                 flex-shrink: 0;
                 font: var(--text-font);
                 border: 1px solid var(--grey-base);
