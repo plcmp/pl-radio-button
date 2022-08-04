@@ -36,8 +36,8 @@ class PlRadioButton extends PlElement {
                 background: var(--primary-base);
                 border: 1px solid var(--primary-base);
                 color: white;
+                --pl-icon-fill-color: white;
             }
-
 		`;
     }
 
