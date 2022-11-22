@@ -14,7 +14,6 @@ class PlRadioButton extends PlElement {
             :host {
                 display: flex;
                 flex-direction: row;
-                width: 100%;
                 min-height: var(--base-size-md);
                 align-items: center;
                 box-sizing: border-box;
@@ -34,6 +33,7 @@ class PlRadioButton extends PlElement {
                 align-items: center;
                 justify-content: center;
                 transition: all .3s ease-in-out;
+                flex-shrink: 0;
             }
 
             :host(:hover) .radio{
