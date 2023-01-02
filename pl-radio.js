@@ -28,7 +28,7 @@ class PlRadioButton extends PlElement {
                 width: var(--base-size-xxs);
                 height: var(--base-size-xxs);
                 border-radius: var(--base-size-xxs);
-                border: 1px solid var(--grey-light);
+                border: 1px solid var(--grey-base);
                 display: flex;
                 align-items: center;
                 justify-content: center;
