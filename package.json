@@ -1,6 +1,6 @@
 {
     "name": "@plcmp/pl-radio-button",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "description": "Simple radio button component.",
     "main": "pl-radio-button.js",
     "repository": {
