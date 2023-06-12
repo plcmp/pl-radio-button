@@ -30,6 +30,7 @@ class PlRadioButton extends PlElement {
                 border: 1px solid var(--grey-base);
                 border-right: 1px solid transparent;
                 gap: 8px;
+                background: var(--background-color);
             }
 
             :host([selected]),  :host(:hover) {
