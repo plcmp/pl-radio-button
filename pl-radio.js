@@ -11,23 +11,22 @@ class PlRadioButton extends PlElement {
         :host {
             display: flex;
             flex-direction: row;
-            min-height: var(--base-size-md);
+            height: var(--pl-base-size);
             align-items: center;
             box-sizing: border-box;
-            gap: var(--space-sm);
+            gap: var(--pl-space-sm);
             user-select: none;
-            font: var(--text-font);
+            font: var(--pl-text-font);
             cursor: pointer;
-            margin: 0 8px;
             background: var(--background-color);
-            --pl-radio-border: var(--grey-base);
-            --pl-radio-background: var(--background-color);
+            --pl-radio-border: var(--pl-grey-base);
+            --pl-radio-background: var(--pl-background-color);
         }
 
         :host .radio {
-            width: var(--base-size-xxs);
-            height: var(--base-size-xxs);
-            border-radius: var(--base-size-xxs);
+            width: calc(var(--pl-base-size)/2 + 2px);
+            height: calc(var(--pl-base-size)/2 + 2px);
+            border-radius: 100%;
             border: 1px solid var(--pl-radio-border);
             background: var(--pl-radio-background);
             display: flex;
@@ -35,29 +34,30 @@ class PlRadioButton extends PlElement {
             justify-content: center;
             transition: all .3s ease-in-out;
             flex-shrink: 0;
+            box-sizing: border-box;
         }
 
         :host(:hover){
-            --pl-radio-border: var(--grey-dark);
+            --pl-radio-border: var(--pl-grey-dark);
         }
 
         :host([selected]) {
-            --pl-radio-border: var(--primary-base);
-            --pl-radio-background: var(--primary-base);
+            --pl-radio-border: var(--pl-primary-base);
+            --pl-radio-background: var(--pl-primary-base);
         }
 
         :host([selected]) .radio:hover {
-            --pl-radio-border: var(--primary-dark);
-            --pl-radio-background: var(--primary-dark);
+            --pl-radio-border: var(--pl-primary-dark);
+            --pl-radio-background: var(--pl-primary-dark);
         }
 
         :host([selected]) .radio::after {
             display: block;
             content: '';
-            background: var(--background-color);
+            background: var(--pl-background-color);
             width: 8px;
             height: 8px;
-            border-radius: 8px;
+            border-radius: 100%;
         }
     `;
 

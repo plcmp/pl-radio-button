@@ -16,26 +16,26 @@ class PlRadioButton extends PlElement {
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
-                padding: var(--space-xs) var(--space-sm);
-                height: var(--base-size-md);
+                padding: 0 var(--pl-space-md);
+                height: var(--pl-base-size);
                 min-width: fit-content;
                 box-sizing: border-box;
-                color: var(--text-color);
+                color: var(--pl-text-color);
                 user-select: none;
                 cursor: pointer;
                 outline:none;
                 transition: background, color .3s ease-in-out;
                 flex-shrink: 0;
-                font: var(--text-font);
-                border: 1px solid var(--grey-base);
+                font: var(--pl-text-font);
+                border: 1px solid var(--pl-grey-base);
                 border-right: 1px solid transparent;
                 gap: 8px;
-                background: var(--background-color);
+                background: var(--pl-background-color);
             }
 
             :host([selected]),  :host(:hover) {
-                background: var(--primary-base);
-                border: 1px solid var(--primary-base);
+                background: var(--pl-primary-base);
+                border: 1px solid var(--pl-primary-base);
                 color: white;
                 --pl-icon-fill-color: white;
             }
